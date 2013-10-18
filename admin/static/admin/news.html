@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<!-- css files -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css" />
+<link rel="stylesheet" href="../css/responsiveslides.css">
+<script src="../js/dust-core-0.3.0.min.js"></script>
+<script type="text/javascript" src="../js/newslisttemplate.js"></script>  		
+<script src="../js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="../css/responsiveslides.min.js" ></script>
+
+<script>
+	$(document).ready(function() {
+		newsList()	;
+  });	
+function newsList(){
+	$.ajax({
+		type:'GET',
+		url : '/imagesList',		
+		cache : false,
+		success : function(data) {						
+			dust.render("corouselTemplate2", {
+				images : data
+			}, function(err, out) {							
+				//$("#contentlist").html(out);		
+				$('#slider2').html(out);  
+        $("#slider2").responsiveSlides({           
+          speed: 800
+        });  		
+			});
+		}
+	});
+}
+</script>
+<body>
+	<div class='container-fluid '>
+	 <div class="row-fluid " >
+	      <div class="span12">	      	
+		     <div class="navbar"> 
+		        <div class="navbar-inner">
+							<ul class="nav">
+								<li><a href="#">Welcome to Flickr Home Page</a></li>									
+							</ul>												   
+						</div>	
+					</div>
+				</div>
+	</div> 
+		<div class="row-fluid" >			
+			
+		  <div class="span12" id='pagecontent'>	
+		  	<span id="filter-count"></span>
+				<div id='list_content'>
+					
+					<div class="span12" ><hr /></div>
+						<!-- table for Events information about chinmaya.com  -->
+					<div class="span10" >							
+						 <ul class="rslides" id="slider2" style='border:2px solid #000;height:500px;'>
+        		</ul>
+					</div>
+				</div>
+					<div id="newsview"> </div>
+			</div>	
+		</div>
+	</div>
+	
+</body>
+</html>
