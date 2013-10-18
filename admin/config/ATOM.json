@@ -1,0 +1,20 @@
+{
+	"reqURL":"https://payment.atomtech.in/paynetz/epi/fts?",
+	"params": {     "login":"667",
+                        "pass":"Tekworks@123",
+                        "ttype":"NBFundTransfer",
+                        "prodid":"Tekworks",
+                        "amt":999,
+                        "txnscamt":0,
+                        "txnid":"uniqueId",
+                        "clientcode":"base64encodedusername",
+                        "custacc":"1234567890",
+                        "txncurr":"INR",
+                        "date":"03/12/2012",
+                        "udf1":"",
+			"udf2":"",
+			"udf3":"",
+			"udf4":"",
+                        "ru":"http://www.tekworksinfo.com:3335/pay/atomstatus"
+                }
+}

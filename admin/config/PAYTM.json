@@ -1,0 +1,14 @@
+
+{
+  "reqURL":"https://secure.paytm.in/oltp-web/processTransaction?",
+  "params": { 
+    "MID":"tekinf48115956721431",
+    "ORDER_ID":"uniqueId",
+    "CUST_ID":"uniqueId",
+    "TXN_AMOUNT":0,
+    "CHANNEL_ID":"WAP",
+    "INDUSTRY_TYPE_ID":"Retail",                  
+    "WEBSITE":"tekworks",   
+    "CHECKSUMHASH": ""                                                                                                   
+  }
+}

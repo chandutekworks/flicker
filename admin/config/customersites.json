@@ -1,0 +1,20 @@
+{
+  "chinmaya":{ "url":"http://www.chinmayasanchar.com/",
+    "Success":"paysuccess.html",
+    "Failed":"payfailed.html",
+    "Pending":"paypending.html",
+    "Unknown":"payfailed.html",
+    "back":"subscription.html",
+    "TXN_SUCCESS":"paysuccess.html",
+    "TXN_FAILURE":"payfailed.html"
+  },
+"iskcon":{ "url":"http://www.iskconworld.com/",
+    "Success":"paysuccess.html",
+    "Failed":"payfailed.html",
+    "Pending":"paypending.html",
+    "Unknown":"payfailed.html",
+    "back":"subscription.html",
+    "TXN_SUCCESS":"paysuccess.html",
+    "TXN_FAILURE":"payfailed.html"
+  }
+}
