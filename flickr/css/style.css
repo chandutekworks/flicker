@@ -1,0 +1,50 @@
+body{
+	background:url(../img/texture_grain_200x200_v2.png);   
+}
+
+.two-col-special {
+	margin-left:  30px;  
+  overflow: auto;  
+  list-style:none;
+}
+.two-col-special li {
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  height: 250px;
+  width: 25%;
+  margin: 20px;   
+  padding: 0;
+  vertical-align: top; /* In case multi-word categories form two lines */
+}
+.two-col-special li:before {   
+  padding: 5px;
+  margin-right: 5px; /* you can tweak the gap */
+  color: orange;
+  background-color: white; /* in case you want a color... */
+  display: inline-block;
+}	
+img{
+	border: 1px solid #000;
+	height:80%;
+	width:99%;
+	border-radius: 5px;
+}
+a{
+	text-decoration:none;color:purple;
+}
+
+.heading{
+	color : #fff;
+	padding: 10px;
+	text-align: center;	
+	background-color: rgb(45, 42, 53);
+	font-size: 20px;
+}
+.backbtn{
+	margin-top: 5px;
+	height: 37px;
+	border-radius: 5px;
+	border: 1px solid #000;
+
+}

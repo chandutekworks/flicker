@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery.getJSON demo</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";	
+			var images_list = '';
+			$.getJSON( flickerAPI, {		
+				format: "json"
+			}).done(function( data ) {						
+				$.each( data.items, function( i, item ) {	
+				var author = item.author;						
+				author = author.substr(author.indexOf('('),author.length-1);	
+					 /*href=\""+item.link+"\"*/
+					images_list = images_list + "<li><a href=\"imagesbyuser.html?id="+item.author_id+"\" target='_blank'><img src="+item.media.m+" /></a><div align='center'>"+author+"</div>  <div align='center'><a href=\"friendsphotos.html?user_id="+item.author_id+"\" >Friend's Photos </a><div></li>";			
+				});
+				$('#images').html(images_list);
+			});
+		});
+	</script>	
+</head>
+<body>
+	<div class='heading'><span>FLICKR HOME</span></div>
+	<ul id="images" class="two-col-special" data-columns="2"></ul>	
+</body>
+</html>

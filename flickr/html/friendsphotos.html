@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery.getJSON demo</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			var user_id = window.location.search.substring(1).split('=')[1];	
+			var flickerAPI1 = "http://api.flickr.com/services/feeds/photos_friends.gne?jsoncallback=?";
+			var images_list = '';
+			$.getJSON( flickerAPI1, {		
+				user_id : user_id,
+				format: "json"
+			}).done(function( data ) {				
+				if(data.items.length>0){
+					$.each( data.items, function( i, item ) {	
+						var chandu ='chandu.html';
+						var link = item.author;			
+						var data = "<li><a href=\""+item.link+"\" target='_blank'><img src="+item.media.m+" /></a></li>";
+						images_list = images_list + data;			
+					});
+					$('#images').html(images_list);
+				}else{					
+					$('#images').html("<h4 align='center'>No friends imaegs for this user</h4>");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class='heading'><span>Public Photos Uploaded by Author's Friends</span></div>
+	<div class='clear'></div>
+	<button class='backbtn'><a href='flickrhome.html' style='text-decoration:none;'>back to home</a></button>
+	<div class='clear'></div>
+	<ul id="images" class="two-col-special" data-columns="2"></ul>	
+</body>
+</html>
