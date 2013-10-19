@@ -164,7 +164,7 @@ body,html {
   /*background-color:rgba(0,0,0,0.05);/*rgb(82, 81, 77)rgb(204, 204, 203) #e0ac46*/
   /*background:url(http://lab.web-gate.fr/images/blur/blur06.png)center center fixed;
   background-size: cover; */
-  background:url(texture_grain_200x200_v2.png);   
+   background:url(texture_grain_200x200_v2.png); 
 }
 
 a {

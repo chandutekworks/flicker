@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>jQuery.getJSON demo</title>
+<head>	
+	<title>Flicker Home</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="../js/jquery-1.8.3.js"></script>
 	<script>
@@ -14,8 +13,7 @@
 			}).done(function( data ) {						
 				$.each( data.items, function( i, item ) {	
 				var author = item.author;						
-				author = author.substr(author.indexOf('('),author.length-1);	
-					 /*href=\""+item.link+"\"*/
+				author = author.substr(author.indexOf('('),author.length-1);						
 					images_list = images_list + "<li><a href=\"imagesbyuser.html?id="+item.author_id+"\"><img src="+item.media.m+" /></a><div align='center'>"+author+"</div>  <div align='center'><a href=\"friendsphotos.html?user_id="+item.author_id+"\" >Friend's Photos </a><div></li>";			
 				});
 				$('#images').html(images_list);
